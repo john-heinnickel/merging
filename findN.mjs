@@ -2,12 +2,15 @@ import {readFileSync} from "fs";
 
 const data = readFileSync("BigFile.dat").utf8Slice(0).split("\n")
 const bounds = [
+	3007, 3008, 3009, 3010, 3011, 
 	99980
 ];
 const step = [
+	20, 20, 20, 20, 20,
 	20
 ];
 const offset = [
+	1, 1, 1, 1, 1
 	0
 ];
 
