@@ -31,9 +31,8 @@ export function findNForValue(val) {
     let adjustment = 0;
     while (section < bounds.length) {
        if (val <= bounds[section]) {
-            return adjustment + ((val - val % step[section]) / step[section]);
+            return offset[section] + ((val - val % step[section]) / step[section]);
        } else {
-            adjustment = adjustment + offset[section];
             section = section + 1;
        }
     }
