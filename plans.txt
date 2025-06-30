@@ -1,0 +1,19 @@
+Change A: Add 3008 to 3012
+Change B: Add 9008 to 9012
+Change C: Add 72008 to 72012 and 2008 to 2012
+Change D: Remove 72008 to 72012, Add 30008 to 30012
+Change E: Remove 9008 to 9012, Add 30008 to 30012
+Change F: Add 30008 to 300012
+Change G: Remove 30008 to 30012
+
+
+Notice: D depends on C
+Notice: E depends on B
+Notice: D and E both reproduce F
+Notice: G depends on F
+
+
+Branch One: (A, B, C)
+Branch Two: (A, C)
+Branch Three: (B, F)
+
