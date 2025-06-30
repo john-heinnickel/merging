@@ -9,8 +9,10 @@ Change G: Remove 30008 to 30012
 
 Notice: D depends on C
 Notice: E depends on B
-Notice: D and E both reproduce F
+Notice: D before C is undefined
+Notcee: E before B is F
 Notice: G depends on F
+Notice: G before F is empty set
 
 
 Branch One: (A, B, C)

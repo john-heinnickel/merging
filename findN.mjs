@@ -1,9 +1,15 @@
 import {readFileSync} from "fs";
 
 const data = readFileSync("BigFile.dat").utf8Slice(0).split("\n")
-const bounds = [99980];
-const step = [20];
-const offset = [0];
+const bounds = [
+	99980
+];
+const step = [
+	20
+];
+const offset = [
+	0
+];
 
 data[data.length - 1] = undefined;
 
@@ -25,9 +31,8 @@ export function findNForValue(val) {
     let adjustment = 0;
     while (section < bounds.length) {
        if (val <= bounds[section]) {
-            return adjustment + ((val - val % step[section]) / step[section]);
+            return offset[section] + ((val - val % step[section]) / step[section]);
        } else {
-            adjustment = adjustment + offset[section];
             section = section + 1;
        }
     }
