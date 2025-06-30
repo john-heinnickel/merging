@@ -1,9 +1,15 @@
 import {readFileSync} from "fs";
 
 const data = readFileSync("BigFile.dat").utf8Slice(0).split("\n")
-const bounds = [99980];
-const step = [20];
-const offset = [0];
+const bounds = [
+	99980
+];
+const step = [
+	20
+];
+const offset = [
+	0
+];
 
 data[data.length - 1] = undefined;
 
