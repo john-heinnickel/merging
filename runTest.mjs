@@ -6,6 +6,26 @@ let ii;
 for ( ii of testCases ) {
 	const n = findNForValue(ii);
 	const range = showValuesAtN(n);
-	console.log( "<" + ii + "> is at <" + n + ">, and is both greater than or equal to <" + range[0] + "> and less than <" + range[1] + ">" );
+	if ( range[0] === undefined ) {
+            if (ii < range[1]) {
+	        console.log( "PASS: <" + ii + "> is at <" + n + ">, and is less than <" + range[1] + ">");
+	    } else {
+	        console.log( "FAIL: <" + ii + "> is at <" + n + ">, but is greater than or equal to <" + range[1] + ">" );
+	    }
+	} else if (range[1] === undefined) {
+            if (ii >= range[0]) {
+	        console.log( "PASS: <" + ii + "> is at <" + n + ">, and is greater than or equal to <" + range[0] + ">");
+	    } else {
+	        console.log( "FAIL: <" + ii + "> is at <" + n + ">, but is less than <" + range[0] + ">" );
+	    }
+	} else {
+            if ( (ii >= range[0]) && (ii < range[1]) ) {
+	        console.log( "PASS: <" + ii + "> is at <" + n + ">, and is both greater than or equal to <" + range[0] + "> and less than <" + range[1] + ">" );
+	    } else if (ii < range[0]) {
+	        console.log( "FAIL: <" + ii + "> is at <" + n + ">, but is less than <" + range[0] + ">" );
+            } else {
+	        console.log( "FAIL: <" + ii + "> is at <" + n + ">, but is greater than or equal to <" + range[1] + ">" );
+	    }
+       }
 }
 
